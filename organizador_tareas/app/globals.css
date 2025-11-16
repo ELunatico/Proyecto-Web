@@ -5,14 +5,14 @@
 @layer components {
   .nav-button-tailwind {
     @apply text-white bg-transparent border-none px-6 cursor-pointer text-xl md:text-2xl font-medium transition-all ease-in-out flex-1 flex justify-center items-center relative max-w-[250px] h-full;
-    transition-duration: 500ms; /* <- CORREGIDO */
+    transition-duration: 500ms;
   }
   .nav-button-tailwind:hover {
     @apply bg-black/30 text-white;
   }
   .nav-button-tailwind::after {
     @apply content-[''] absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[3px] transition-all ease-in-out;
-    background-color: white; /* 👈 CAMBIADO: De verde a blanco */
+    background-color: white;
     transition-duration: 400ms;
   }
   .nav-button-tailwind:hover::after {
@@ -21,18 +21,18 @@
 
   .form-input-tailwind {
     @apply w-full p-3 border-2 border-[#ddd] rounded-lg text-base transition-colors focus:border-[#8a2be2] focus:outline-none focus:ring-2 focus:ring-[#8a2be2]/50;
-    transition-duration: 300ms; /* <- CORREGIDO */
+    transition-duration: 300ms;
   }
 
   .boton-confirmar-tailwind {
     @apply bg-gradient-to-r from-[#8a2be2] to-[#6a11cb] text-white border-none rounded-lg py-3.5 px-5 text-base font-semibold cursor-pointer w-full transition-all duration-300 hover:from-[#410a7c] hover:to-[#7626c2] hover:-translate-y-0.5 hover:shadow-lg;
-    transition-duration: 300ms; /* <- CORREGIDO */
+    transition-duration: 300ms;
   }
   
   .lista-item-tailwind {
     @apply flex flex-col gap-1 p-4 my-2.5 bg-[#f9f5ff] rounded-lg border-l-4 border-[#8a2be2] transition-transform;
     @apply md:grid md:grid-cols-[2fr_1.5fr_1fr_1fr] md:gap-4 md:items-center;
     @apply md:hover:translate-x-1 md:hover:bg-[#f0e6ff];
-    transition-duration: 200ms; /* <- CORREGIDO */
+    transition-duration: 200ms;
   }
 }

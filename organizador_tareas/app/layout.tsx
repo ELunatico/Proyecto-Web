@@ -14,14 +14,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      {/* 👇 ¡AQUÍ ESTÁ EL CAMBIO! 👇 */}
-      <body className="bg-purple-300"> {/* O prueba con bg-violet-50 si prefieres */}
+      <body className="bg-purple-300">
         <Navbar />
-        
         <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           {children}
         </main>
-
       </body>
     </html>
   );
