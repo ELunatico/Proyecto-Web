@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:latest
+    container_name: mysql_organizador
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 'una_contraseña_nueva_y_segura'
+      MYSQL_DATABASE: 'organizador_tareas'
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_app_data:/var/lib/mysql
+      - ./DB/mysql/init:/docker-entrypoint-initdb.d
+
+  backend:
+    container_name: go_backend
+    build: ./backend-go
+    restart: always
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      DB_DSN: "root:una_contraseña_nueva_y_segura@tcp(db:3306)/organizador_tareas?charset=utf8mb4&parseTime=True&loc=Local"
+
+  frontend:
+    container_name: nextjs_frontend
+    build: ./organizador_tareas
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    environment:
+      NEXT_PUBLIC_API_URL: "http://localhost:8080"
+      
+volumes:
+  mysql_app_data:
