@@ -119,19 +119,19 @@ export default function IA() {
               onClick={() => consultarIA('general')}
               className="bg-purple-100 text-[#6a11cb] py-3 px-4 rounded-lg font-semibold hover:bg-purple-200 transition-colors"
             >
-              📝 Resumen General
+               Resumen General
             </button>
             <button 
               onClick={() => consultarIA('urgente')}
               className="bg-red-100 text-red-600 py-3 px-4 rounded-lg font-semibold hover:bg-red-200 transition-colors"
             >
-              🔥 ¿Qué es Urgente?
+               ¿Qué es Urgente?
             </button>
             <button 
               onClick={() => consultarIA('tiempo')}
               className="bg-blue-100 text-blue-600 py-3 px-4 rounded-lg font-semibold hover:bg-blue-200 transition-colors"
             >
-              ⏱️ Análisis de Tiempo
+               Análisis de Tiempo
             </button>
           </div>
         </div>

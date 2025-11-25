@@ -77,15 +77,15 @@ export default function Dashboard() {
         <p className="text-gray-600">Resumen de tu productividad en tiempo real.</p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <StatCard title="Total Tareas" count={totalTareas} color="border-blue-500" icon="📝" subtext="En tu historial" />
-        <StatCard title="Pendientes" count={numPendientes} color="border-yellow-500" icon="⏳" subtext="Por hacer" />
-        <StatCard title="Prioridad Alta" count={altas} color="border-red-500" icon="🔥" subtext="Requieren atención" />
-        <StatCard title="Completadas" count={completadas} color="border-green-500" icon="✅" subtext={`${porcentajeCompletado}% del total`} />
+        <StatCard title="Total Tareas" count={totalTareas} color="border-blue-500" icon="" subtext="En tu historial" />
+        <StatCard title="Pendientes" count={numPendientes} color="border-yellow-500" icon="" subtext="Por hacer" />
+        <StatCard title="Prioridad Alta" count={altas} color="border-red-500" icon="" subtext="Requieren atención" />
+        <StatCard title="Completadas" count={completadas} color="border-green-500" icon="" subtext={`${porcentajeCompletado}% del total`} />
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="bg-white p-6 rounded-2xl shadow-lg lg:col-span-2">
           <h3 className="text-xl font-bold text-[#2c3e50] mb-4 flex items-center gap-2">
-            📅 Próximas Entregas
+            Próximas Entregas
           </h3>
           <div className="space-y-3">
             {proximas.length > 0 ? (
@@ -112,7 +112,7 @@ export default function Dashboard() {
           </div>
         </div>
         <div className="bg-white p-6 rounded-2xl shadow-lg flex flex-col">
-          <h3 className="text-xl font-bold text-[#2c3e50] mb-6">📊 Carga de Trabajo</h3>
+          <h3 className="text-xl font-bold text-[#2c3e50] mb-6"> Carga de Trabajo</h3>
           <div className="mb-8 text-center bg-purple-50 p-4 rounded-xl border border-purple-100">
             <span className="text-gray-500 text-sm block mb-1">Tiempo estimado para terminar</span>
             <span className="text-3xl font-extrabold text-[#6a11cb]">
